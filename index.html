@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css"> 
+    <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<script>
+    const images = [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHIj5dynMTgVGFsE12rNxwEBav6EZ3QUyIEg&s",
+      "https://img.freepik.com/premium-photo/beautiful-long-hair-brunette-woman-with-beauty-hairstyle-is-touching-her-face-by-hands-female-model_431835-1259.jpg?semt=ais_hybrid",
+      "https://img.freepik.com/free-photo/beautiful-woman-portrait-white-background_23-2148256319.jpg"
+    ];
+    
+    let index = 0;
+    setInterval(() => {
+      index = (index + 1) % images.length;
+      document.getElementById("carouselImage").src = images[index];
+    }, 3000);
+
+
+        function initMap() {
+            var location = { lat: 37.7749, lng: -122.4194 }; 
+            var map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 12,
+                center: location
+            });
+            var marker = new google.maps.Marker({
+                position: location,
+                map: map
+            });
+        }
+  </script>
+<body> 
+      <div>
+     <div class=" d-flex justify-content-between align-items-center px-4 pt-2">
+        <div class="    ">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-tiktok"></i>
+        </div>
+        <p><i class="fa-solid fa-phone"></i> +1 1234556789</p>
+    </div>
+    <marquee class=" text-white p-1" style="background-color: black;">Get Your full set of Lashes TrueXpress <span class="price">(reg $170)</span> <span class="fw-bold"
+       >$99.99</span> </marquee>
+       <h1 class="text-center text-secondary f-bold fs-1">deka<span class="part">lash</span></h1>
+       
+       <div id="imageContainer" class="position-relative vh-auto">
+        <img id="carouselImage" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxctjU21pUENIsGN1F4qY21P7GfdEbhTMp2g&s" 
+             class=" w-100  bg-image " alt="Slide" style="height: 700px;">
+             <div class="card-form  p-4 position-absolute top-0 start-50 my-4">
+                <h1 class="form-header">LIVE MASCARA FREE</h1>
+                <p>Regular price <span class="price">(reg $170)</span> <span style="color: gray;">$99.99</span> <span
+                        style="color: palevioletred;"> - limited time only</span>
+    
+                </p>
+                <form action="" class="form-data">
+                    <input type="text" placeholder="First Name" class="m-2 w-100">
+                    <input type="text" placeholder="Last Name" class="m-2">
+                    <div style="display: flex; width: 360px; m-2">
+                        <select name="" id="">
+                            <option value="">US +1</option>
+                            <option value="">IN +91</option>
+                            <option value="">GB + 44</option>
+                            <option value="">AU + 61</option>
+                            <option value="">GB + 86</option>
+                            <option value="">JP + 81</option>
+                            <option value="">DE + 49</option>
+    
+    
+                        </select>
+                        <input type="tel" placeholder="Enter Phone Number">
+                    </div>
+                    <input type="email" placeholder="Email" class="m-2">
+                    <button class="btn btn-secondary  ml-4" type="submit">Get My Offer</button>
+                </form>
+                <div class="d-flex justify-content-center  align-items-start text-start">
+                    <input type="checkbox" class="me-2 checkbox">
+                    <p>I agree to the terms & conditions and the privacy policy as documented here.</p>
+                </div>
+                
+                <div class="d-flex align-items-start text-start">
+                    <input type="checkbox" class="me-2 checkbox">
+                    <p>I agree to receive marketing text messages once a week regarding sales and other
+                        promotional events at the phone number provided above. Message & data rates may apply.</p>
+                </div>
+                
+                <div class="d-flex align-items-start text-start">
+                    <input type="checkbox" class="me-2 checkbox">
+                    <p>I agree to receive customer support text messages for the orders placed. Message
+                        & data rates may apply.</p>
+                </div>
+                
+                <p>Offer will be sent via SMS</p>
+            </div>
+    </div>
+     <div class="about-con my-5">
+            <div class="card-1">
+
+                <img src="https://offers-dekalashstudios.com/frontend/img/image/img1.jpg" alt="" class="img-data">
+                <div>
+
+                    <h1>Redefine your lash confidence</h1>
+                    <p> Experience the magic of our lash stylists who specialize in creating unique lash designs
+                        tailored to your individual style. Our TrueXpress lashes create a light-volume look with
+                        natural-looking length with a full set in half the time of a standard volume appointment.</p>
+                </div>
+            </div>
+            <div class="card-1">
+
+                <img src="https://offers-dekalashstudios.com/frontend/img/image/img2.jpg" alt="" class="img-data" style="order: calc(1);">
+                <div>
+
+                    <h1>Get the lashes that fit you</h1>
+                    <p> Our lash stylists specialize in designing TrueXpress, Hybrid, Volume, and Mega Volume Lashes. Our lightweight eyelash extensions are so comfortable and feel so natural, you'll forget you have them, but everyone else is sure to notice your beautiful new confidence.</p>
+                </div>
+            </div>
+            <div class="card-1">
+
+                <img src="https://offers-dekalashstudios.com/frontend/img/image/img3.jpg" alt="" class="img-data">
+                <div>
+
+                    <h1>Redefine Your Lash Confidence</h1>
+                    <p> Transform your look with our precision-crafted lash extensions. Designed for comfort and sophistication, our lightweight extensions enhance your natural beauty, providing a seamless, effortless elegance that speaks volumes without saying a word.</p>
+                </div>
+            </div>
+        </div>
+        <!-- natural beauty -->
+       <div id="imageContainer" class="position-relative vh-auto ">
+        <div class="img-form-con" > 
+            <img id="carouselImage" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxctjU21pUENIsGN1F4qY21P7GfdEbhTMp2g&s" 
+             class=" w-100  bg-image mt-5 " alt="Slide" style="height: 600px;">
+            <div class="natural-data text-white position-absolute top-0  start-50 m-5">
+
+                <p>Natural Beauty</p>
+                <h1>Lash Lift & Tinting</h1>
+                <p class="">
+                    Say goodbye to the hassle of lash curlers and hello to perfectly lifted lashes with Deka Lash. Our lash lift is an all-natural, semi-permanent application that boosts your natural lashes from the root, giving them a curled, lengthened appearance. Perfect for when you take a break from lash extensions, aren't ready to commit to them, or simply because you love a clean, natural look. Whether you prefer your lashes with or without a tint, our lash lifts last anywhere between 6-8 weeks.</p>
+                </div>
+        </div>
+       </div>
+    </div>
+    </div>
+    <div class="d-flex  justify-content-between w-100 mt-5">
+    <div id="map" class="w-50"></div>
+    <script async defer 
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBX83NSycq7NO5dRK3d1XjNHKqzqlUmtyk&callback=initMap">
+    </script>
+    <div class="map-data shadow w-50 p-4 ">
+        <h1 class="fw-bold fs-1 text-dark"><i class="fa-solid fa-location-dot text-danger"></i>  Deka Lash Winston-Salem</h1>
+        <p>1247 Creekshire Way, Suite 12</p>
+        <p><i class="fa-solid fa-globe text-primary"></i> Winston-Salem, NC 27103</p>
+        <a href=""><i class="fa-solid fa-phone text-dark"></i> +1 (336) 422-0626</a>
+        <p class="fw-bold"><i class="fa-solid fa-clock text-primary"></i>  Business Hours</p>
+        <div class="d-flex  justify-content-between">
+            <p>Mon:</p>
+            <p>Closed</p>
+        </div>
+        <div class="d-flex  justify-content-between">
+
+            <p>Tue, Wed, Thu:</p>
+            <p>  9:00 AM - 5:00 PM</p>
+        </div>
+        <div class="d-flex  justify-content-between">
+
+            <p>Fri:</p>
+            <p> 12:00 PM - 8:00 PM</p>
+        </div>
+        <div class="d-flex  justify-content-between">
+            <p>Sun:</p>
+            <p>Closed</p>
+        </div>
+    </div>
+</div>
+<div class="footer-con">
+<h1 class="text-white fw-bold">Wake Up Makeup-Free And Confident</h1>
+<p class="px-5">Get the long lashes of your dreams. Feel confident and ready to take on your day by waking up with luscious lashes.</p>
+<button class="btn btn-danger">Book Now</button>
+</div>
+</div>
+<div class="d-flex justify-content-between align-items-center px-3 py-2">
+    <h1 class="text-center text-secondary fw-light fs-1 ">deka<span class="part">lash</span></h1>
+<p><span class="hover:text-danger"> Privacy & Policy</span>
+    © 2025 Deka Lash Franchise, LLC</p>
+</div>
+<!-- Bootstrap JS (Requires Popper.js) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
